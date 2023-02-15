@@ -6,3 +6,7 @@ sfuns.dll : sfuns.cs
 
 main.exe : main.cs sfuns.dll
 	mcs -target:exe -out:main.exe -reference:sfuns.dll main.cs
+	
+.PHONEY : clean
+clean:
+	$(RM) *.exe *.dll [Oo]ut* log*

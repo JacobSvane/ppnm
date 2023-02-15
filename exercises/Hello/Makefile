@@ -4,6 +4,6 @@ Out.txt : hello.exe
 hello.exe : hello.cs
 	mcs -out:hello.exe hello.cs
 
-.PHONEY:clean
+.PHONEY : clean
 clean:
-	rm --force Out.txt hello.exe
+	$(RM) *.exe *.dll [Oo]ut* log*
