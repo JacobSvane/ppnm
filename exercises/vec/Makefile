@@ -4,8 +4,9 @@ Out.txt : main.exe
 vec.dll: vec.cs
 	mcs -target:library -out:vec.dll vec.cs
 	
-cmath.dll: cmath.cs complex.cs 
-	mcs $^ -target:library -out:$@
-
+DIR = $(Home)/repos/ppnm/exercises/matlib/complex          # or whatever your directory is
+cmath.dll : $(DIR)/cmath.cs $(DIR)/complex.cs
+	mcs -target:library -out:./cmath.dll $^
+	
 main.exe: main.cs vec.dll cmath.dll
 	mcs -target:exe -out:main.exe -reference:vec.dll -reference:cmath.dll  main.cs
