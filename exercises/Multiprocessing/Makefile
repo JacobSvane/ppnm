@@ -16,3 +16,7 @@ main.exe : main.cs
 	
 pfor.exe : pfor.cs
 	mcs $< 
+	
+.PHONEY : clean
+clean:
+	$(RM) *.exe *.dll [Oo]ut* log*
