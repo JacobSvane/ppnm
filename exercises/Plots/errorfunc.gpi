@@ -1,0 +1,13 @@
+set terminal svg
+set key bottom right
+set output "Errorfunc.svg"
+set xlabel "x"
+set ylabel "y"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Errorfunction"
+plot [-0.01:0.18][-0.01:0.18] \
+ "errorfunc.data" with lines linetype 1 title "theory" \
+,"erf.data" with points pointtype 4 title "experiment" 
