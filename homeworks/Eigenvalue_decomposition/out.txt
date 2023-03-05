@@ -1,0 +1,8 @@
+testing VTAV==D
+passed
+testing VDVT==A
+passed
+testing VTV==1
+passed
+testing VVT==1
+passed
