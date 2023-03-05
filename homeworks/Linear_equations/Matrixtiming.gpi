@@ -1,0 +1,19 @@
+set terminal svg
+set key left
+set output "Matrixtiming.svg"
+set fit logfile "fit.log"
+set xlabel "N"
+set ylabel "Time to decompose"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Timing of matrix reduction of matrix size NxN"
+
+f(x) = a*x**3 + b*x**2 + c*x + d
+
+fit f(x) 'Matrixtiming.txt' via a, b, c, d
+
+plot [0:1100] \
+ "Matrixtiming.data" with points title "Measured time" \
+, f(x) with lines title "fitted ax³+bx²+cx+d" 
