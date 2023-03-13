@@ -2,7 +2,7 @@ TIME = time --portability --append --output $@
 
 all : out.txt Eigenfunctions.svg
 
-out.txt : main.exe
+out.txt : main.exe 
 	mono $< > $@
 	
 Eigenfunctions.svg : Eigenfunctions.gpi varyingdr.txt varyingrmax.txt

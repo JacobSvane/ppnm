@@ -1,0 +1,30 @@
+set terminal svg
+set key left
+set output "decay.svg"
+set fit logfile "fit.log"
+set xlabel "Time in days"
+set ylabel "Activity in percent"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Decay of element ThX"
+
+a = 4.9511553496486
+lambda = -0.169887082001008
+a1 = 4.9511553496486+0.149298439469915
+lambda1 = -0.169887082001008+0.0833671469717246
+a2 = 4.9511553496486-0.149298439469915
+lambda2 = -0.169887082001008-0.0833671469717246
+
+
+f(x) = exp(a)*exp(x*lambda)
+f1(x) = exp(a1)*exp(x*lambda1)
+f2(x) = exp(a2)*exp(x*lambda2)
+
+
+plot [0:17] \
+ "decay_formatted.txt" using ($1):($2):($3) with errorbars title "Measured activity" \
+, f(x) with lines title "fitted function" \
+, f1(x) with lines title "Measured activity + uncertainty" \
+, f2(x) with lines title "Measured activity - uncertainty"

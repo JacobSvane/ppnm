@@ -1,0 +1,17 @@
+The best fit is found to be given as:
+y(t) = 141.338164625218*exp(t*-0.169887082001008)
+
+The halflife of ThX is found to be:
+4.08004641904341 - The known value of ²²⁴Ra is 3.631(2) (10.1016/j.apradiso.2019.108933)
+
+The covariance matrix is then given as:
+0.0222900240281517	-0.0256047819612903	
+2.0737126692956E-18	0.00695008119420513	
+
+While the uncertainties on the fitting coefficients are calculated to be:
+ a = 4.9511553496486 ± 0.149298439469915 
+ lambda = -0.169887082001008 ± 0.0833671469717246
+
+The halflife is therefore given : 
+ t = 4.08004641904341 ± 2.00216417553062  - The known value of ²²⁴Ra is 3.631(2) (10.1016/j.apradiso.2019.108933)
+ The found uncertainty is thus very terrible compared to known values
