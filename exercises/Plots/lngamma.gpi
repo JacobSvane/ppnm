@@ -1,0 +1,12 @@
+set terminal svg
+set key bottom right
+set output "lngamma.svg"
+set xlabel "x"
+set ylabel "y"
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 10000
+set title "lnGamma function"
+plot [-0.01:10][-1:15] \
+ "lngamma.data" with lines linetype 1 title "theory"

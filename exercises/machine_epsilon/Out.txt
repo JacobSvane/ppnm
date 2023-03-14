@@ -1,0 +1,15 @@
+my max int = 2147483647
+2147483647
+my min int = -2147483648
+-2147483648
+Calcuilated machine epsilon, double = 2.22044604925031E-16
+System machine epsilon, double = 2.22044604925031E-16
+Calcuilated machine epsilon, float = 1.192093E-07
+System machine epsilon, float = 1.19209289550781E-07
+sumA-1 = 0.000000e+000 should be 1.110223e-010
+sumB-1 = 1.110223e-010 should be 1.110223e-010
+The difference is because of the way the 1 is added to the sum
+d1=7.999999999999999e-001
+d2=8.000000000000000e-001
+d1==d2 ? => False
+d1==d2 using approx bool? => True

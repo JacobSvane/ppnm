@@ -1,0 +1,11 @@
+Square root of -1 with cmath = 6.12e-17+1i
+Square root of -1 with cmath = i - test using approx: True
+Square root of i with cmath = 0.707+0.707i
+Square root of i with cmath = 1/sqrt(2)+i/sqrt(2) - test using approx: True
+e^i with cmath = 0.54+0.841i
+e^i*pi with cmath = -1+1.22e-16i
+i^i with cmath = 0.208+0i
+i^i with cmath = 0.208 - test using approx: True
+Ln(i) with cmath = 0+1.57i
+Ln(i) with cmath = i*pi/2 - test using approx: True
+Sin(i*pi) with cmath = 0+11.5i

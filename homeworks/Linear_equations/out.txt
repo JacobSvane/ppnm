@@ -1,0 +1,10 @@
+Testing whether the R matrix is upper triangular:
+matrix R is upper triangular
+Testing whether the Q^TQ = 1:
+Q^TQ=1
+Testing whether the decomposition worked:
+The decomposition worked, i.e. QR=A
+Testing solution to vector problem
+Ax=b is found to be true
+Testing that AB=I
+AB=I is found to be true
