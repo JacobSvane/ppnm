@@ -1,0 +1,6 @@
+Expected and calculated values for a, b and c for the f(x) = x function
+Calculated value = 0.00000  	Expected value = 0  	Calculated value = 1.00000     	Expected value = 1    	Calculated value = 0.00000		Expected value = 0
+Calculated value = Infinity  	Expected value = 0  	Calculated value = -Infinity     	Expected value = 1    	Calculated value = 1.00000		Expected value = 1
+Calculated value = 0.00000  	Expected value = 0  	Calculated value = 1.00000     	Expected value = 1    	Calculated value = 2.00000		Expected value = 2
+Calculated value = Infinity  	Expected value = 0  	Calculated value = -Infinity     	Expected value = 1    	Calculated value = 3.00000		Expected value = 3
+Calculated value = 0.00000  	Expected value = 0  	Calculated value = 1.00000     	Expected value = 1    	Calculated value = 4.00000		Expected value = 4

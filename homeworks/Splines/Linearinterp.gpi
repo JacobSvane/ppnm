@@ -1,0 +1,24 @@
+set terminal svg
+set key at graph 0.7,0.98
+set output "Linearinterp.svg"
+set fit logfile "fit.log"
+set xlabel "x"
+set ylabel "x²"
+set y2label "x³/3"
+set ytics nomirror
+set y2tics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Linear interpolation"
+
+f(x) = x*x
+f1(x) = x*x*x/3
+
+plot [0:10] \
+ "Interpolation_xx.txt" using ($1):($2) with points pt 5 lc rgb "violet" title "Linear interpolation values" \
+, "Function_xx.txt" using ($1):($2) with points pt 5 lc rgb "blue" title "f(x)=x² Points used for interpolation" \
+, f(x) with lines lc rgb "blue" title "f(x)=x² function" \
+,  "Interpolation_xx.txt" using ($1):($3) with points pt 5 lc rgb "red" axes x1y2 title "Summed integrated value of interpolation" \
+, f1(x) with lines lc rgb "red" axes x1y2 title "f(x)=x³/3 function" \
