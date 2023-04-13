@@ -82,5 +82,5 @@ public static double integral(vector x, vector b, vector c, double z){
 	dx = z-x[j];
 	integ += c[j]*dx+b[j]/2*Pow(dx,2)+c[j]/3*Pow(dx,3);
 	return integ; 
-}	
+}
 }

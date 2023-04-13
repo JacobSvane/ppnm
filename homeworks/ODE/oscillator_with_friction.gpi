@@ -1,0 +1,17 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "oscillator_with_friction.svg"
+set fit logfile "fit.log"
+set xlabel "x"
+set ylabel "f(x)"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Oscillator with friction"
+
+plot [0:10] \
+ "oscillator_with_friction.txt" using ($1):($2) with lines lc rgb "blue" title "Angle of pendulum, theta(t)" \
+ , "oscillator_with_friction.txt" using ($1):($3) with lines lc rgb "green" title "Angular velocity of pendulum, omega(t)" \
+
