@@ -1,0 +1,17 @@
+set terminal svg
+set key at graph 0.5,0.99
+set output "errorfunction.svg"
+set fit logfile "fit.log"
+set xlabel "x"
+set ylabel "f(x)"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "errorfunction"
+
+plot [-3:3] \
+ "errorfunction.txt" using ($1):($2) with points lc rgb "blue" title "calculated values for errorfunction" \
+
+
