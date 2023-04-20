@@ -1,0 +1,42 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "unit_circle_area_error.svg"
+set fit logfile "fit.log"
+set xzeroaxis
+set yzeroaxis
+set samples 50
+
+
+f(x) = 1/sqrt(x)
+f1(x) = pi
+
+set multiplot 
+set lmargin at screen 0.15;
+set rmargin at screen 0.95;
+set bmargin at screen 0.55;
+set tmargin at screen 0.95;
+set xtics nomirror
+unset ytics
+set tics out
+unset xtics
+set ytics nomirror
+set ylabel "Area"
+plot [0:10000] \
+ "unit_circle_area.txt" using ($1):($2) with points pt 7 lc rgb "blue" title "Calculated area of unit circle" \
+ , f1(x) with lines lc rgb "green" title "Pi"\
+ , "unit_circle_area_quasi.txt" using ($1):($2) with points pt 7 lc rgb "red" title "Calculated area of unit circle quasi" 
+
+set lmargin at screen 0.15;
+set rmargin at screen 0.95;
+set bmargin at screen 0.15;
+set tmargin at screen 0.5;
+set ytics nomirror
+set xtics nomirror
+set tics out
+set xlabel "N"
+set ylabel "error"
+plot [0:10000] \
+ "unit_circle_area.txt" using ($1):($3) with points pt 7 lc rgb "blue" title "Calculated area of unit circle error" \
+ , f(x) with lines lc rgb "green" title "f(x)=1/sqrt(N)"\
+ ,"unit_circle_area_quasi.txt" using ($1):($3) with points pt 7 lc rgb "red" title "Calculated area of unit circle error quasi" 
+unset multiplot
