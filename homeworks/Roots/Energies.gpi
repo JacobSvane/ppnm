@@ -1,0 +1,18 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "Energies.svg"
+set fit logfile "fit.log"
+set xlabel "r_{max} [a_B]"
+set ylabel "E[Hartree]"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 50
+set title "Calculated energy E as function of r_{max}"
+
+f(x) = -0.5
+
+plot [1:11][-0.6:0]\
+f(x) with lines lc rgb "green" title "Exact"\
+, "Energies.txt" using ($1):($2) with points pt 7 lc rgb "blues" title "Calculated" \

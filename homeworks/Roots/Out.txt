@@ -1,0 +1,13 @@
+Test of the newton method
+First a simple linear equation f(x)=x+2 is tested, starting point set as 2 for the search
+The algorithm provides the following root:
+-2
+Next the function f(x,y)=(4x+3y+2,x²) is tested, starting points are set as 2,3 for the search
+The algorithm provides the following root:
+-0.570312505400117, 0.0937500072001559
+Finally the Rosenbrock's valley function is tested, starting points are set as -3,-3 for the search. The expected value is 1,1 for the solution
+The algorithm provides the following root:
+0.999999052971619, 0.999998086579339
+It is thus found that the algorithm works as intended
+The algorithm is now used to calculated the solution to the energy of a Hydrogen atom in Hartree.
+Resulting plots from the exercise can be found in the plots provided
