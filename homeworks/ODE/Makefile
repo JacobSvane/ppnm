@@ -1,10 +1,13 @@
-all : Out.txt ummeqminusu.svg oscillator_with_friction.svg
+all : Out.txt ummeqminusu.svg oscillator_with_friction.svg Lotka_volterra.svg
 
 Out.txt : main.exe 
 	mono $< > $@
 
 ummeqminusu.svg : ummeqminusu.gpi ummeqminusu.txt 
 	gnuplot ummeqminusu.gpi
+	
+Lotka_volterra.svg : Lotka_volterra.gpi Lotka_volterra.txt 
+	gnuplot Lotka_volterra.gpi
 	
 oscillator_with_friction.svg : oscillator_with_friction.gpi oscillator_with_friction.txt 
 	gnuplot oscillator_with_friction.gpi
