@@ -1,0 +1,54 @@
+The Rosenbrock's valley fuction is tested using different starting points
+Starting point: 1, 1
+Number of steps used: 0
+Minimum location: 1, 1
+Expected location: 1, 1
+
+Starting point: 17, 19
+Number of steps used: 55169
+Minimum location: 1.00001054251967, 1.00002034848541
+Expected location: 1, 1
+
+Starting point: -5, 9
+Number of steps used: 85
+Minimum location: 0.999987779434887, 0.999975166050941
+Expected location: 1, 1
+
+Starting point: 4, -3
+Number of steps used: 8051
+Minimum location: 1.00000320870267, 1.000008249478
+Expected location: 1, 1
+
+Starting point: 2, 6
+Number of steps used: 29
+Minimum location: 0.999999089811625, 0.999997985351743
+Expected location: 1, 1
+
+The Himmelblau's valley fuction is tested using different starting points
+Starting point: 2, 1
+Number of steps used: 13
+Minimum location: 2.99999948916172, 2.00000101522171
+Expected location: 3, 2
+
+Starting point: 17, 19
+Number of steps used: 17
+Minimum location: 2.99999999326873, 2.00000003426126
+Expected location: 3, 2
+
+Starting point: -5, 9
+Number of steps used: 10
+Minimum location: -2.80511850395985, 3.13131150888177
+Expected location: -2.805, 3.131
+
+Starting point: 4, -3
+Number of steps used: 7
+Minimum location: 3.58442293834593, -1.84812364088154
+Expected location: 3.584, -1.848
+
+Starting point: 2, 6
+Number of steps used: 10
+Minimum location: 2.99999810205454, 2.00000014290374
+Expected location: 3, 2
+
+Number of steps used for the quasi newton medthod to find a minima: 17022
+Number of steps used for the simplex medthod to find a minima: 87

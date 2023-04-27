@@ -1,0 +1,17 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "Higgs_simplex.svg"
+set fit logfile "fit.log"
+set xlabel "Energy [GeV]"
+set ylabel "Signal [arb. u.]"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 50
+set title "Higgs production signal"
+
+
+plot \
+"Higgs_simplex_fit.txt" using ($1):($2) with lines lc rgb "green" title "Breit-Wigner fit"\
+, "higgs.data" using ($1):($2):($3) with errorbars lc rgb "blues" title "Experiment" \
