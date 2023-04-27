@@ -1,0 +1,8 @@
+∫₀¹ dx 1/√(x) = 1.99999372766301, expected value = 2
+The number of subdivisions was 1 with 8 evaluations
+∫₀¹ dx ln(x)/√(x) = -3.99987412568532, expected value = -4
+The number of subdivisions was 19 with 80 evaluations
+
+The routine now solves the integrals faster. The integrals were also solved using scipy in python.
+∫₀¹ dx 1/√(x) was solved in 6 subdivisions and 231 evaluations while ∫₀¹ dx ln(x)/√(x) was solved in 8 subdivisions and 315 evaluations.
+Thus it is found that the function made in c# solves ∫₀¹ dx 1/√(x) in fewer divisions and evaluations while ∫₀¹ dx ln(x)/√(x) is solved using fewer evaluations but more subdivisions.

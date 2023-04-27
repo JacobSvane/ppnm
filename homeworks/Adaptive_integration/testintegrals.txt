@@ -1,6 +1,14 @@
 Testing integrals within the expected accuracy which is given as 0.001 in this case
 The integrals are tested using Math.Abs(clac-known) <= 0.001. If this is true, the integral is printed
-∫₀¹ dx √(x) = 0.666680932893738, expected value = 2/3
-∫₀¹ dx 1/√(x) = 1.99999738796403, expected value = 2
-∫₀¹ dx 4*√(1-x²) = 3.14159750770263, expected value = 3.14159265358979
-∫₀¹ dx ln(x)/√(x) = -3.99999834899021, expected value = -4
+∫₀¹ dx √(x) = 0.666953909054655, expected value = 2/3
+The number of subdivisions was 3 with 16 evaluations
+
+∫₀¹ dx 1/√(x) = 1.99996150007805, expected value = 2
+The number of subdivisions was 2142 with 8572 evaluations
+
+∫₀¹ dx 4*√(1-x²) = 3.14183457802727, expected value = 3.14159265358979
+The number of subdivisions was 6 with 28 evaluations
+
+∫₀¹ dx ln(x)/√(x) = -3.99991705899915, expected value = -4
+The number of subdivisions was 2150 with 8604 evaluations
+
