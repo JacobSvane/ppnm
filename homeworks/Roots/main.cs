@@ -3,9 +3,13 @@ using static System.Console;
 using static System.Math;
 
 class main{
+public static int counter;
+public static double rmin = 1.0/16, rmax = 10;
+public static double acc = 0.01, eps = 0.01; //accuracy goals for ODE
 public static void Main(){
 	testNewton();
 	Hydrogen();
+	convergence();
 }//Main
 public static void testNewton(){
 	WriteLine("Test of the newton method");
@@ -33,7 +37,7 @@ for(double i =1; i<=10; i= i+1){
 		return new vector(frmax);
 		};
 
-	vector vstart=new vector(-1.0);
+	vector vstart=new vector(-0.7);
 	vector vroot=Newton.newton(master,vstart,eps:1e-4);
 	double energy=vroot[0];
 	var outfile = new System.IO.StreamWriter($"Function{i}.txt");
@@ -46,5 +50,42 @@ for(double i =1; i<=10; i= i+1){
 }
 outfile1.Close();
 }//Hydrogen
+public static void convergence(){
+	counter = 0; acc = 0.01; eps = 0.01; rmax = 10; rmin = 1.0/16;
+	var outfile = new System.IO.StreamWriter("Convergence.txt");
+	
+	outfile.WriteLine("rmax	E	rmin	E	acc=eps	E");
+	for(int i = 1; i<10; i++){
+		acc = 0.01; eps = 0.01;
+		rmax = i; rmin = 1.0/16;
+		vector x = Newton.newton(func, new vector(-0.7), 1e-4);
+		
+		rmax = 10; rmin = 1.0/16*i;
+		vector y = Newton.newton(func, new vector(-0.7), 1e-4);
+		
+		outfile.Write($"{i}	{x[0]}	{rmin}	{y[0]}	");
 
+		rmax = 10; rmin = 1.0/16;
+
+		acc = 1*i; eps = 1*i;
+		vector z = Newton.newton(func, new vector(-0.7), 1e-4);
+
+		outfile.WriteLine($"{acc}	{z[0]}");
+		
+	}
+	outfile.Close();
+}
+
+public static vector func(vector Evec){
+	counter ++;
+	double E = Evec[0];
+	double h=0.01;
+	var xs=new genlist<double>();
+	var ys=new genlist<vector>();
+	Func<double, vector, vector> del = (double r, vector u) => (new vector(u[1], -2*(1.0/r + E)*u[0]));
+
+	vector a = ode.driver(del,rmin, new vector(rmin-rmin*rmin, 1-2*rmin), rmax,acc,eps,h,xs,ys);
+	return new vector(a[0]);
+	
+}
 }//main

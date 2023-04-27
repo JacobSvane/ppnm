@@ -1,11 +1,11 @@
-Part A
+Part A.1
 The area of the unit circle was calculated and plotted as a function of the sampling points.
 The estimated error was also calculated and plotted. It seemed that the estimated error was larger than the 1/Sqrt(N)
 
-Part B
+Part A.2
 ∫0π  dx/π ∫0π  dy/π ∫0π  dz/π [1-cos(x)cos(y)cos(z)]-1 was calculated and plotted as a function of sampling points.
 The estimated error was also calculated and plotted. The estimated error seemed to be quite close to 1/Sqrt(N)
 
-Part C
+Part B
 The quatsi random method was used to calculate the area of the unit circle. It was found that the method worked much faster than the plain monte carlo method.
 The calculated area and the error from the quasi random method is plotted along with the plain method

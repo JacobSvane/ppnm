@@ -141,8 +141,8 @@
 	</g>
 </g>
 <g fill="none" color="black" stroke="currentColor" stroke-width="1.00" stroke-linecap="butt" stroke-linejoin="miter">
-	<use xlink:href='#gpPt6' transform='translate(130.86,125.17) scale(4.50)' color='rgb(  0,   0, 255)'/>
-	<use xlink:href='#gpPt6' transform='translate(180.19,295.25) scale(4.50)' color='rgb(  0,   0, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(130.86,125.22) scale(4.50)' color='rgb(  0,   0, 255)'/>
+	<use xlink:href='#gpPt6' transform='translate(180.19,295.24) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt6' transform='translate(229.52,328.98) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt6' transform='translate(278.85,336.46) scale(4.50)' color='rgb(  0,   0, 255)'/>
 	<use xlink:href='#gpPt6' transform='translate(328.18,338.09) scale(4.50)' color='rgb(  0,   0, 255)'/>

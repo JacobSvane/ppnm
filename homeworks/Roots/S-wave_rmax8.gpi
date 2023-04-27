@@ -1,0 +1,19 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "S-wave_rmax8.svg"
+set fit logfile "fit.log"
+set xlabel "r[a_B]"
+set ylabel "F_E(r)"
+set ytics nomirror
+set xtics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Hydrogen S-wave shooting to F_E(r_{max})=0"
+
+plot [0:10][0:0.4]\
+ "Function8.txt" using ($1):($2) with points title "r_{max}=8" \
+ , "Function8.txt" using ($1):($3) with lines title "Exact" 
+
+

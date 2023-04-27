@@ -1,0 +1,53 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "Convergence.svg"
+set fit logfile "fit.log"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 50
+set title "Calculated energy E as function of r_{max}"
+
+f(x) = -0.5
+
+set multiplot 
+set lmargin at screen 0.15;
+set rmargin at screen 0.40;
+set bmargin at screen 0.15;
+set tmargin at screen 0.95;
+set ylabel "E[Hartree]"
+set xlabel "r_{max}"
+set xtics nomirror
+unset ytics
+set tics out
+set ytics nomirror
+plot [1:11][-0.6:0]\
+f(x) with lines lc rgb "green" title "Exact"\
+, "Convergence.txt" using ($1):($2) with points pt 7 lc rgb "blues" title "Calculated" 
+
+set lmargin at screen 0.40;
+set rmargin at screen 0.65;
+set bmargin at screen 0.15;
+set tmargin at screen 0.95;
+set xtics nomirror
+set tics out
+unset ytics
+unset ylabel
+set xlabel "min at r_{max}=10"
+plot [0:0.69][-0.6:0]\
+f(x) with lines lc rgb "green" title "Exact"\
+,"Convergence.txt" using ($3):($4) with points pt 7 lc rgb "yellow" title "Calculated" 
+
+set lmargin at screen 0.65;
+set rmargin at screen 0.90;
+set bmargin at screen 0.15;
+set tmargin at screen 0.95;
+set xtics nomirror
+set tics out
+unset ytics
+unset ylabel
+set xlabel "ODE accuracy"
+plot [0:10][-0.6:0]\
+f(x) with lines lc rgb "green" title "Exact"\
+,"Convergence.txt" using ($5):($6) with points pt 7 lc rgb "red" title "Calculated" \

@@ -18,7 +18,7 @@ public static void testmontecarlo(){
 	}
 	outfile1.Close();
 	
-	WriteLine("Part A\nThe area of the unit circle was calculated and plotted as a function of the sampling points.\nThe estimated error was also calculated and plotted. It seemed that the estimated error was larger than the 1/Sqrt(N)\n");
+	WriteLine("Part A.1\nThe area of the unit circle was calculated and plotted as a function of the sampling points.\nThe estimated error was also calculated and plotted. It seemed that the estimated error was larger than the 1/Sqrt(N)\n");
 	
 	vector a2 = new vector(0.0,0.0,0.0);
 	vector b2 = new vector(PI,PI,PI);
@@ -30,7 +30,7 @@ public static void testmontecarlo(){
 	}
 	outfile2.Close();
 	
-	WriteLine("Part B\n∫0π  dx/π ∫0π  dy/π ∫0π  dz/π [1-cos(x)cos(y)cos(z)]-1 was calculated and plotted as a function of sampling points.\nThe estimated error was also calculated and plotted. The estimated error seemed to be quite close to 1/Sqrt(N)\n");
+	WriteLine("Part A.2\n∫0π  dx/π ∫0π  dy/π ∫0π  dz/π [1-cos(x)cos(y)cos(z)]-1 was calculated and plotted as a function of sampling points.\nThe estimated error was also calculated and plotted. The estimated error seemed to be quite close to 1/Sqrt(N)\n");
 	
 	}//testmontecarlo
 
@@ -44,6 +44,6 @@ public static void testquasimc(){
 		outfile3.WriteLine($"{i} {q3} {e3} {Abs(q3-exact3)}");
 	}
 	outfile3.Close();
-	WriteLine("Part C\nThe quatsi random method was used to calculate the area of the unit circle. It was found that the method worked much faster than the plain monte carlo method.\nThe calculated area and the error from the quasi random method is plotted along with the plain method");
+	WriteLine("Part B\nThe quatsi random method was used to calculate the area of the unit circle. It was found that the method worked much faster than the plain monte carlo method.\nThe calculated area and the error from the quasi random method is plotted along with the plain method");
 	}//testquasimc
 }//main
