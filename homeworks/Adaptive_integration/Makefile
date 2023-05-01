@@ -1,9 +1,9 @@
-all : Out.txt errorfunction.svg
+all : Errorfunction.txt errorfunction.svg
 
-Out.txt : main.exe 
+Errorfunction.txt : main.exe 
 	mono $< > $@
 
-errorfunction.svg : Errorfunction.gpi errorfunction.txt 
+errorfunction.svg : Errorfunction.gpi errorfunction.txt Errorfunction_tabulated.data
 	gnuplot Errorfunction.gpi
 
 main.exe : main.cs Adaptive_integration.dll 
