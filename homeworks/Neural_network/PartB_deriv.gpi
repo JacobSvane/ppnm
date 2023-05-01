@@ -1,0 +1,19 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "PartB_deriv.svg"
+set fit logfile "fit.log"
+set xlabel "x"
+set ylabel "f(x)"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 200
+set title "Function"
+
+
+plot \
+"Training_points.txt" using ($1):($2) with points lc rgb "green" title "Training points"\
+, "Calculated_function_PartB.txt" using ($1):($2) with lines lc rgb "blues" title "Calculated function" \
+, "Calculated_function_PartB.txt" using ($1):($3) with lines lc rgb "green" title "First derivative" \
+, "Calculated_function_PartB.txt" using ($1):($4) with lines lc rgb "red" title "Second derivative" \

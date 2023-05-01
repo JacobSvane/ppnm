@@ -1,0 +1,17 @@
+set terminal svg
+set key at graph 0.99,0.99
+set output "PartA.svg"
+set fit logfile "fit.log"
+set xlabel "x"
+set ylabel "f(x)"
+set ytics nomirror
+set tics out
+set xzeroaxis
+set yzeroaxis
+set samples 50
+set title "Function"
+
+
+plot \
+"Training_points.txt" using ($1):($2) with points lc rgb "green" title "Training points"\
+, "Calculated_function.txt" using ($1):($2) with lines lc rgb "blues" title "Calculated function" \
