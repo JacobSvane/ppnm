@@ -60,7 +60,7 @@ public class main{
 	public static void hamiltonianvarryingdr(){
 		var outfile = new StreamWriter("varyingdr.txt");
 		double rmax=10;
-		for (double dr = 1.5+1/32;dr > 0.0;dr -=1.0/64){
+		for (double dr = 1.5+1/32;dr > 0.0;dr -=1.0/8){
 		int npoints = (int)(rmax/dr)-1;
 		vector r = new vector(npoints);
 		for(int i=0;i<npoints;i++)r[i]=dr*(i+1);
@@ -84,7 +84,7 @@ public class main{
 	public static void hamiltonianvarryingrmax(){
 		var outfile = new StreamWriter("varyingrmax.txt");
 		double dr=0.1;
-		for (double rmax = 2+1/32; rmax < 12.0; rmax +=1.0/32){
+		for (double rmax = 2+1/32; rmax < 12.0; rmax +=1.0/16){
 		int npoints = (int)(rmax/dr)-1;
 		vector r = new vector(npoints);
 		for(int i=0;i<npoints;i++)r[i]=dr*(i+1);
