@@ -1,8 +1,8 @@
 TIME = time --portability --append --output $@
 
-all : out.txt decay.svg
+all : Out.txt decay.svg
 
-out.txt : main.exe
+Out.txt : main.exe
 	mono $< > $@
 	
 decay.svg : decay.gpi decay.data

@@ -25,7 +25,7 @@ public static void Main(){
 	WriteLine();
 	}
 	WriteLine($"\nWhile the uncertainties on the fitting coefficients are calculated to be:\n a = {c[0]} ± {Sqrt(S[0,0])} \n lambda = {c[1]} ± {Sqrt(S[1,1])}\n");
-	WriteLine($"The halflife is therefore given : \n t = {-Log(2)/(c[1])} ± {Abs((Sqrt(S[1,1])/c[1])*(-Log(2)/(c[1])))}  - The known value of ²²⁴Ra is 3.631(2) (10.1016/j.apradiso.2019.108933)\n The found uncertainty is thus very terrible compared to known values");
+	WriteLine($"The halflife is therefore given : \n t = {-Log(2)/(c[1])} ± {Abs((Sqrt(S[1,1])/c[1])*(-Log(2)/(c[1])))}  - The known value of ²²⁴Ra is 3.631(2) (10.1016/j.apradiso.2019.108933)\n The found uncertainty is thus not amazing compared to known values");
 
 	
 	var outfile = new System.IO.StreamWriter("decay_formatted.txt");

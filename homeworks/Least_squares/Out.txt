@@ -14,4 +14,4 @@ While the uncertainties on the fitting coefficients are calculated to be:
 
 The halflife is therefore given : 
  t = 4.08004641904341 ± 2.00216417553062  - The known value of ²²⁴Ra is 3.631(2) (10.1016/j.apradiso.2019.108933)
- The found uncertainty is thus very terrible compared to known values
+ The found uncertainty is thus not amazing compared to known values
