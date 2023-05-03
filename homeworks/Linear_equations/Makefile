@@ -1,6 +1,6 @@
 TIME = time --portability --append --output $@
 
-all : out.txt timing.txt Matrixtiming.txt Matrixtiming.svg
+all : out.txt timing.txt Matrixtiming.data Matrixtiming.svg
 
 timing.txt : ocounting.exe
 	echo N 100 >$@
@@ -45,4 +45,4 @@ Matrixreduction.dll : Matrixreduction.cs vector.cs matrix.cs cmath.cs complex.cs
 	mcs -target:library -out:$@ $^
 
 clean :
-	$(RM) *.dll *.exe [Oo]ut*
+	$(RM) *.dll *.exe [Oo]ut* *.svg *.log *.txt *.data

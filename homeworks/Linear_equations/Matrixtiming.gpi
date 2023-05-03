@@ -3,7 +3,7 @@ set key left
 set output "Matrixtiming.svg"
 set fit logfile "fit.log"
 set xlabel "N"
-set ylabel "Time to decompose"
+set ylabel "Time to decompose [s]"
 set tics out
 set xzeroaxis
 set yzeroaxis
@@ -11,9 +11,12 @@ set samples 800
 set title "Timing of matrix reduction of matrix size NxN"
 
 f(x) = a*x**3 + b*x**2 + c*x + d
+g(x) = a1*x**2 + b1*x + c1
 
-fit f(x) 'Matrixtiming.txt' via a, b, c, d
+fit f(x) 'Matrixtiming.data' via a, b, c, d
+fit g(x) 'Matrixtiming.data' via a1, b1, c1
 
 plot [0:1100] \
  "Matrixtiming.data" with points title "Measured time" \
-, f(x) with lines title "fitted ax³+bx²+cx+d" 
+, f(x) with lines title "fitted ax³+bx²+cx+d" \
+, g(x) with lines title "fitted ax²+bx+c" \
