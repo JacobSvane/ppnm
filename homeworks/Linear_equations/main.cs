@@ -6,6 +6,7 @@ public class main{
 	public static void Main(){
 		testQRGSdecomp();
 		testQRGSsolve();
+		testQRGSdeterminant();
 		testQRGSinverse();
 	}//Main
 	public static void testQRGSdecomp(){
@@ -66,6 +67,20 @@ public class main{
 		if ((A1*sol).approx(b1)) WriteLine("Ax=b is found to be true");
 		else WriteLine("The solution is not found to be correct");
 	}//testsolve
+	public static void testQRGSdeterminant(){
+		int n1 = 5, m1 = 5;
+		matrix A1 = new matrix(n1,m1);
+		for (int i=0;i<n1;++i){
+			for (int j=0;j<m1;++j){
+				A1[i, j] = rnd.NextDouble();
+			}
+		}
+		matrix Q1= A1.copy();
+		matrix R1 = new matrix(m1,m1);
+		QRGS.decomp(ref Q1, ref R1);
+		WriteLine("\nFinding determinant of randon 5x5 matrix:");
+		WriteLine($"{QRGS.determinant(Q1)}\n");
+	}//testdeterminant
 	public static void testQRGSinverse(){
 		int n2 = 5, m2 = 5;
 		matrix A2 = new matrix(n2,m2);

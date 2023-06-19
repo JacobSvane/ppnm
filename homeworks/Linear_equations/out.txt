@@ -6,5 +6,9 @@ Testing whether the decomposition worked:
 The decomposition worked, i.e. QR=A
 Testing solution to vector problem
 Ax=b is found to be true
+
+Finding determinant of randon 5x5 matrix:
+0.00019025747290876
+
 Testing that AB=I
 AB=I is found to be true

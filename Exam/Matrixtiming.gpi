@@ -1,0 +1,20 @@
+set terminal svg
+set key left
+set output "Matrixtiming.svg"
+set fit logfile "fit.log"
+set xlabel "N"
+set ylabel "Time to decompose [s]"
+set yrange [0:10]
+set tics out
+set ytics nomirror
+set xtics nomirror
+set ytics
+set xzeroaxis
+set yzeroaxis
+set samples 800
+set title "Timing of matrix reduction of matrix size NxN"
+
+plot [0:1100] \
+ "Matrixtiming.data" with points lc "blue" title "Measured time Hessenberg" \
+, "MatrixtimingQR.data"  with points lc "green" title "Measured time QR" \
+

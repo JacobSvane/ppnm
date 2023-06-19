@@ -1,0 +1,19 @@
+set terminal svg
+set output "Eigenfunctions.svg"
+set xlabel "dr"
+set xrange [1.5:0]
+set yrange [-0.6:-0.1]
+set x2label "rmax"
+set ylabel "Energy [Hartree]"
+set xtics nomirror
+set x2tics
+set tics out
+set title "Energy as function of dr or rmax"
+
+f(x) = -0.5
+
+
+plot \
+ "varyingdr.txt" using 1:2 with lines title "varying dr, plotted on inverse x-axis, r-max set at 10" \
+, "varyingrmax.txt" using 1:2 axes x2y1 with lines title "varying rmax, dr set at 0.1" \
+, f(x) with lines dt 2 title "Expected value" 

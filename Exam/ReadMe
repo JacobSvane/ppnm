@@ -1,0 +1,9 @@
+I believe that with my student ID of 201705399 I have been given exam question #21 and this is the one I'll be doing.
+
+A matrix reduced using the Jacobi transformations give either an upper or lower diagonalized matrix depending on the way the fundtion is implemented. By implementing the function in such a way that the reduced sequence is J(2,3),J(2,4),...,J(2,n),J(3,4),...,J(3,n),...,J(n-1,n) one will gain lower triagonal form with elements julst above the diagonal also non-zero, i.e. the matrix will be on the lower Hessenberg form. 
+
+From the calculations I have performed, the Hessenberg diagonalization is slower than the QR diagonalization. I have made a plot showing the calculation time as a function of the size of the matrix for both the QR diagonalization and the Hessenberg diagonalization. The plot is shown on a log scale. The QR times are taken from the Homework assignment Linear Equations. As can be seen a calculation of n=700 is faster for the QR diagonalization than a calculation of n=175. The QR diagonalization is thus many times faster.
+
+The matrix generated from the Hessenberg decomposition was used as an input in the linear decomposition code written for in the linear_equations homework. Thus, an upper triangular matrix was produced from the LU and the determinant is found  as the product of the diagonal. 
+
+For self evaluation of the project I believe that I should get an 9 or a 10. I have solved the problem as well as the extras to a satisfying level. This was done mostly using code I have written during the year.
